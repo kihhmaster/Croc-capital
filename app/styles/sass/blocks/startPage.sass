@@ -14,6 +14,7 @@
 	max-width: 1200px
 	padding-left: $gutter
 	padding-right: $gutter
+	z-index: 5
 .partnership__slider--item
 	position: relative
 	width: 100%
@@ -228,7 +229,6 @@ body
 	flex-flow: column nowrap
 	justify-content: center
 	align-items: center
-	text-align-last: left
 	margin-top: $gutter*5
 
 .section__team--title
@@ -248,6 +248,8 @@ h2
 	justify-content: flex-start
 	align-items: center
 	margin-bottom: $gutter*5
+.section__team_person
+	z-index: 10
 .section__team_persons--row
 	&:nth-child(2)
 		justify-content: flex-end
@@ -275,8 +277,6 @@ h2
 	font-size: 14px
 	color: rgba(255, 255, 255, 0.5)
 	font-weight: 300
-	text-transform: lowercase
-
 
 //section__team--finish
 
@@ -292,6 +292,15 @@ h2
 
 .icon_twit
 	mask-image: url(#{$assetImages}/icon_twit.svg)
+	width: 32px
+	height: 31px
+	background: #fff
+	mask-repeat: no-repeat
+	&:hover
+		background: $accent
+		transition: background .1s ease
+.icon_yout
+	mask-image: url(#{$assetImages}/icon_yout.svg)
 	width: 32px
 	height: 31px
 	background: #fff
@@ -391,7 +400,6 @@ h2
 	font-family: $userfont2
 	font-size: 16px
 	font-weight: 400
-	margin-bottom: 20px
 	color: rgba(255, 255, 255, 0.5)
 	text-align: center
 .pesson__avatar
@@ -411,3 +419,144 @@ h2
 	font-size: 16px
 	font-weight: 400
 // .about__slider--finish
+
+
+// section__mediaRes
+.section__mediaRes
+	position: relative
+	width: 100%
+	height: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	margin-top: $gutter*6
+.section__about--title
+	position: absolute
+	top: 0
+	left: 30px
+.section__mediaRes--cotent
+	position: relative
+	width: 100%
+	height: 100%
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin-top: 75px
+.mediaRes__cotent--row
+	position: relative
+	width: 100%
+	height: 100%
+	display: flex
+	justify-content: flex-start
+	align-items: flex-start
+	flex-flow: column nowrap
+.mediaRes__cotent--card
+	display: flex
+	justify-content: flex-start
+	align-items: flex-start
+	flex-flow: column nowrap
+	margin-bottom: 90px
+.mediaRes__cotent__card--title
+	background-image: linear-gradient(0.25turn, #5E84D2,  #8B3375)
+	color: transparent
+	background-clip: text
+	img
+		margin-right: 20px
+.mediaRes__cotent__card--links
+	width: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-flow: row nowrap
+.mediaRes__cotent--link
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-flow: column nowrap
+	font-family: $userfont2
+	font-size: 12px
+	font-weight: 300
+	margin-right: 20px
+	width: 250px
+	height: 100px
+	background: rgba(23, 29, 41, 0.4)
+	fiter: blur(5px)
+	border-radius: 5px
+	margin-top: 25px
+	p
+		color: rgba(255, 255, 255, 0.5)
+		&:hover
+			color: $accent2
+			transition: color .1s ease
+.mediaRes__cotent--link
+	.mediaRes__cotent__link--title
+		font-family: $userfont
+		font-size: 18px
+		font-weight: 400
+		color: #fff
+		text-transform: uppercase
+		
+		
+
+// section__mediaRes--finish
+// .section__contact
+.section__contact
+	position: relative
+	width: 100%
+	height: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	margin-top: $gutter*6
+	margin-bottom: $gutter
+.section__cotact_form
+	width: 100%
+	height: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-flow: column nowrap
+	margin-top: $gutter*2
+.contact_form-label
+	width: 100%
+	height: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-flow: row nowrap
+.contact_form-input
+	width: 100%
+	background: transparent
+	border: none
+	font-family: $userfont2
+	font-size: 16px
+	line-height: 1.1
+	border-bottom: 2px solid #232323 
+	color: rgba(255, 255, 255, 0.9)
+	margin-bottom: 90px
+	margin-right: 90px
+
+.section__contact--title
+	position: absolute
+	top: 0
+	left: 30px
+	// .section__contact--finish
+
+
+//footer__content
+.footer__content
+	position: relative
+	width: 100%
+	height: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	margin-top: $gutter*6
+	margin-bottom: $gutter
+.footer__menu
+	width: 100%
+	height: auto
+	display: flex
+	align-items: center
+	justify-content: space-evenly
+//footer__contentfinish

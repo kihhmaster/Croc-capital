@@ -36,7 +36,11 @@
 	bottom: 50px;
 	left: 80px;
 }
-.triangle{
+.triangle {
+	z-index: 0
+}
+
+.triangle_1{
 	width: 0;
 	height: 0;
 	border-width: 0 70px 110px 70px;
@@ -67,6 +71,45 @@
 	border-style: solid;
 	filter: drop-shadow(-10px 30px 18px rgba(139, 51, 117, 0.863));
 	filter: blur(20px);
+	transform: rotate(100deg);
+}
+.triangle_4{
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 60%;
+	left: 100px;
+	border-width: 0 120px 135px 120px;
+	border-color: transparent transparent rgba(139, 51, 117, 0.808) transparent;
+	border-style: solid;
+	filter: drop-shadow(-10px 30px 18px rgba(139, 51, 117, 0.863));
+	filter: blur(20px);
+	transform: rotate(100deg);
+}
+.triangle_5{
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 35%;
+	right: 20%;
+	border-width: 0 40px 80px 40px;
+	border-color: transparent transparent rgba(139, 51, 117, 0.808) transparent;
+	border-style: solid;
+	filter: drop-shadow(-10px 30px 18px rgba(139, 51, 117, 0.863));
+	filter: blur(15px);
+	transform: rotate(100deg);
+}
+.triangle_6{
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 60%;
+	left: 52%;
+	border-width: 0 50px 100px 50px;
+	border-color: transparent transparent rgba(3, 59, 180, 0.801) transparent;
+	border-style: solid;
+	filter: drop-shadow(-10px 30px 18px rgba(6, 75, 224, 0.89));
+	filter: blur(18px);
 	transform: rotate(100deg);
 }
 
@@ -616,4 +659,52 @@
   0% {transform:translate(0px, 0px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
   50% {transform:translate(-97px, -75px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
   100% {transform:translate(4px, -1px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+}
+
+
+.stylie_4 {
+  animation-name: stylie_4-transform-keyframes;
+  animation-duration: 16000ms;
+  animation-delay: 0ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform-origin: 0 0;
+}
+@keyframes stylie_4-transform-keyframes {
+  0% {transform:translate(0px, 0px) scale(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
+  33.33% {transform:translate(132px, -4px) scale(1) rotateX(117deg) rotateY(194deg) rotateZ(0deg) translate(-50%, -50%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
+  66.67% {transform:translate(45px, -101px) scale(0.9) rotateX(272deg) rotateY(375deg) rotateZ(0deg) translate(-50%, -50%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
+  100% {transform:translate(-2px, -3px) scale(0) rotateX(534deg) rotateY(348deg) rotateZ(0deg) translate(-50%, -50%);}
+}
+
+
+.stylie_6 {
+  animation-name: stylie_6-transform-keyframes;
+  animation-duration: 8000ms;
+  animation-delay: 0ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform-origin: 0 0;
+}
+@keyframes stylie_6-transform-keyframes {
+  0% {transform:translate(0px, 0px) scale(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
+  50% {transform:translate(50px, -1px) scale(1) rotateX(-5deg) rotateY(186deg) rotateZ(0deg) translate(-50%, -50%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
+  100% {transform:translate(-1px, 0px) scale(0) rotateX(2deg) rotateY(454deg) rotateZ(0deg) translate(-50%, -50%);}
+}
+.stylie_5 {
+  animation-name: stylie_5-transform-keyframes;
+  animation-duration: 15000ms;
+  animation-delay: 0ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform-origin: 0 0;
+}
+@keyframes stylie_5-transform-keyframes {
+  0% {transform:translate(0px, 0px) scale(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
+  33.33% {transform:translate(50px, -1px) scale(1) rotateX(-5deg) rotateY(186deg) rotateZ(0deg) translate(-50%, -50%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
+  66.67% {transform:translate(77px, -23px) scale(1) rotateX(2deg) rotateY(454deg) rotateZ(0deg) translate(-50%, -50%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
+  100% {transform:translate(6px, -1px) scale(0) rotateX(179deg) rotateY(514deg) rotateZ(0deg) translate(-50%, -50%);}
 }
