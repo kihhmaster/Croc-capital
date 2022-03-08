@@ -127,7 +127,7 @@ body
 	display: flex
 	justify-content: center
 	align-items: center
-	margin-top: $gutter*3
+	margin-top: $gutter*6
 .section__help__bg
 	position: absolute
 	left: 0
@@ -167,9 +167,6 @@ body
 	justify-content: space-between
 	font-size: 28px
 	font-weight: bold
-	border: 2px solid transparent
-	border-image: linear-gradient(0.25turn, #5E84D2, #8B3375 )
-	border-image-slice: 1
 .card__star--text
 	background-image: linear-gradient(0.25turn, #8B3375,  #5E84D2)
 	color: transparent
@@ -180,19 +177,20 @@ body
 	justify-content: center
 	width: 100%
 	padding: 15px
+	position: relative
 	summary
 		width: 100%
 		display: flex
 		align-items: flex-start
 		justify-content: space-between
 		list-style: none
+		animation: spoiler2 1.5s
 .section__help_card--star[open]
-	background: #000
-	border: 2px solid transparent
-	border-image: linear-gradient(0.25turn, #5E84D2, #8B3375 )
-	border-image-slice: 1
+	width: 105%
 	z-index: 50
-	box-sizing: content-box
+	animation: spoiler 1.5s
+
+
 .section__help_card-content
 	font-family: $userfont2
 	font-size: 16px
@@ -204,11 +202,10 @@ body
 		content: url(../images/dist/section__help_card-content--icon.svg)
 		margin-right: 20px
 		
-.section__help--card
-	&:nth-child(2n)
-		border-image: linear-gradient(0.25turn, #8B3375, #5E84D2)
-		border: 2px solid transparent
-		border-image-slice: 1
+.section__help_card--right
+	border-image: linear-gradient(0.25turn, #8B3375, #5E84D2)
+	border: 2px solid transparent
+	border-image-slice: 1
 
 
 		
@@ -222,7 +219,7 @@ body
 	display: flex
 	justify-content: center
 	align-items: center
-	margin-top: $gutter*3
+	margin-top: $gutter*6
 .section__team_persons
 	position: relative
 	width: 100%
@@ -231,6 +228,17 @@ body
 	flex-flow: column nowrap
 	justify-content: center
 	align-items: center
+	text-align-last: left
+	margin-top: $gutter*5
+
+.section__team--title
+	position: absolute
+	top: 0
+	left: 30px
+h2 
+	color: #fff
+	font-weight: 700
+	font-size: 36px
 .section__team_persons--row
 	position: relative
 	width: 100%
@@ -239,15 +247,167 @@ body
 	flex-flow: row nowrap
 	justify-content: flex-start
 	align-items: center
+	margin-bottom: $gutter*5
 .section__team_persons--row
 	&:nth-child(2)
 		justify-content: flex-end
 .section__team_person
 	position: relative
 	width: 260px
+	height: 380px
+	display: flex
+	flex-flow: column nowrap
+	justify-content: space-between
+	align-items: center
+.team_reson--desc
+	margin-top: 10px
+	position: absolute
+	bottom: 0
+	right: 0
+	width: 100%
 	height: auto
 	display: flex
 	flex-flow: column nowrap
 	justify-content: flex-start
+	font-family: $userfont2
 	align-items: center
+	text-align: center
+	font-size: 14px
+	color: rgba(255, 255, 255, 0.5)
+	font-weight: 300
+	text-transform: lowercase
+
+
 //section__team--finish
+
+.coroc
+	width: 100%
+	position: relative
+	height: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-flow:  column nowrap
+
+
+.icon_twit
+	mask-image: url(#{$assetImages}/icon_twit.svg)
+	width: 32px
+	height: 31px
+	background: #fff
+	mask-repeat: no-repeat
+	&:hover
+		background: $accent
+		transition: background .1s ease
+.icon_teleg 
+	mask-image: url(#{$assetImages}/icon_teleg.svg)
+	width: 32px
+	height: 31px
+	background: #fff
+	mask-repeat: no-repeat
+	&:hover
+		background: $accent
+		transition: background .1s ease
+.icon_in 
+	mask-image: url(#{$assetImages}/icon_in.svg)
+	width: 32px
+	height: 31px
+	background: #fff
+	mask-repeat: no-repeat
+	&:hover
+		background: $accent
+		transition: background .1s ease
+.peson__soc
+	position: relative
+	width: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+.peson__soc--icon
+	margin: 5px
+
+.person__name
+	text-align: center
+	font-size: 24px
+	font-weight: 400
+	color: #fff
+	text-transform: uppercase
+
+// .about__slider
+.section__about
+	position: relative
+	width: 100%
+	height: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	margin-top: $gutter*6
+.section__about--title
+	position: absolute
+	top: 0
+	left: 30px
+.about__slider
+	margin-top: $gutter*3
+	position: relative
+	width: 100%
+	height: 450px
+	display: flex
+	flex-flow: column nowrap
+	justify-content: center
+	align-items: center
+	.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after
+		content: none
+	.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after
+		content: none
+	.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction
+		position: relative
+		width: 50%
+		bottom: 0
+		.swiper-pagination-bullet
+			background: rgba(128, 43, 105, 0.664)
+		.swiper-pagination-bullet-active
+			background: #E741BC
+.swiper__about_slides
+	position: relative
+	width: 100%	
+.about__slide
+	display: flex
+	justify-content: center
+	align-items: center
+	overflow: hidden
+.about__slider--desc
+	position: relative
+	width: 100%
+	max-width: 500px
+	margin-right: 100px
+	margin-left: 100px
+	display: flex
+	flex-flow: column nowrap
+.about__slider_desc--title
+	font-size: 30px
+	font-weight: bold
+	color: #fff
+.person__profession
+	font-family: $userfont2
+	font-size: 16px
+	font-weight: 400
+	margin-bottom: 20px
+	color: rgba(255, 255, 255, 0.5)
+	text-align: center
+.pesson__avatar
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-flow: column nowrap
+	text-align: center
+.about__slide
+	img
+		position: relative
+		display: inline-block
+		width: 100%
+		margin-left: 100px
+.about__slider_desc--content
+	font-family: $userfont2
+	font-size: 16px
+	font-weight: 400
+// .about__slider--finish

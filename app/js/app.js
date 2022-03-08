@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	const swiperIMG = new Swiper('.partnership--slider', {
 		loop: false,
 		speed: 2000,
-		parallax: true,
 		// mousewheel: {
 		// 	invert: false,
 		// },
@@ -25,13 +24,24 @@ document.addEventListener('DOMContentLoaded', () => {
 			prevEl: '.swiper-button-prev',
 		},
 	})
-	// const swiperText =new Swiper('.partnership__slider--text', {
-	// 	loop: false,
-	// 	speed: 2000,
-	// }) 
+	const swiperAbout = new Swiper('.about__slider', {
+		loop: false,
+		speed: 2000,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+			type: 'bullets',
+		},
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			draggable: true,
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	})
 
-	// swiperIMG.controller.control = swiperText;
-	// swiperText.controller.control = swiperIMG;
 
 
 })
